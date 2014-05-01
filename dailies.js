@@ -91,6 +91,9 @@ var bootScript = function(){
         },
 
         "Dailies that cost NP or items": { type: "divider" },
+        "Bargain Stocks": {
+            href: "/stockmarket.phtml?type=portfolio", type: "daily"
+        },
         "Wheel of Excitement": {
             href: "/faerieland/wheel.phtml", type: "interval",
             delay: 60 * 60 * 2
@@ -169,6 +172,12 @@ var bootScript = function(){
             };
         }
     }
+
+    function pad_zeros(num, len) {
+        var str = num + "";
+        while (str.length < len) str = "0" + str;
+        return str;
+    }
     
     // Handles NST (equivalent to PST).
     var NST = (function() {
@@ -182,9 +191,10 @@ var bootScript = function(){
         // Formats the given timestamp into text for the pulldown menu.
         tnst.format = function(timestamp) {
             if (timestamp <= 0) return "Open!";
-            return (Math.floor(timestamp / 60 / 60) + "h " +
-                    Math.floor(timestamp / 60) % 60 + "m " +
-                    timestamp % 60 + "s");
+            var hours = pad_zeros(Math.floor(timestamp / 60 / 60), 2),
+                min = pad_zeros(Math.floor(timestamp / 60 % 60), 2),
+                sec = pad_zeros(timestamp % 60, 2);
+            return hours + ":" + min + ":" + sec;
         }
         tnst.day = function(){
             return Math.floor(tnst.now() / (60 * 60 * 24));
@@ -271,7 +281,7 @@ var bootScript = function(){
                     "box-shadow": "0 4px 4px #000",
                     "padding": "8px",
                     "position": "absolute",
-                    "width": "240px",
+                    "width": "200px",
                     "left": link.offset().left - 120,
                     "top": link.offset().top + link.height(),
                     "z-index": "9999"
