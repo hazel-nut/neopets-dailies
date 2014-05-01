@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Neopets Reminders
-// @namespace    masqueradestar
+// @namespace    jvirdo
 // @description  Adds daily pulldown with links and countdowns (h/t Jahn Johansen for the original version)
 // @include      http://*.neopets.com/*
 // @include      http://neopets.com/*

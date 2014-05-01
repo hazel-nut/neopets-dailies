@@ -8,4 +8,4 @@ Modified version of the original script (http://userscripts.org/scripts/show/158
 More features to come, with the disclaimer that I'm not a web developer. :)
 
 
-Installation instructions via the original author: http://www.reddit.com/r/neopets/comments/17tatk/i_wrote_a_firefox_plugin_to_remind_me_to_do_my/c88pl47#c88pl47
+Installation instructions via the original author: http://www.reddit.com/r/neopets/comments/17tatk/i_wrote_a_firefox_plugin_to_remind_me_to_do_my/c88pzyn
