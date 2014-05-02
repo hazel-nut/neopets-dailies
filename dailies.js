@@ -92,7 +92,7 @@ var bootScript = function(){
 
         "Dailies that cost NP or items": { type: "divider" },
         "Bargain Stocks": {
-            href: "/stockmarket.phtml?type=portfolio", type: "daily"
+            href: "/stockmarket.phtml?type=list&bargain=true", type: "daily"
         },
         "Wheel of Excitement": {
             href: "/faerieland/wheel.phtml", type: "interval",
