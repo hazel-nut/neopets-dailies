@@ -281,7 +281,7 @@ var bootScript = function(){
                     "box-shadow": "0 4px 4px #000",
                     "padding": "8px",
                     "position": "absolute",
-                    "width": "200px",
+                    "width": "250px",
                     "left": link.offset().left - 120,
                     "top": link.offset().top + link.height(),
                     "z-index": "9999"
