@@ -83,9 +83,6 @@ var bootScript = function(){
         "Mysterious Symol Hole": {
             href: "/medieval/symolhole.phtml", type: "daily"
         },
-        "Obsidian Quarry": {
-            href: "/magma/quarry.phtml", type: "daily"
-        },
         "Money Tree": {
             href: "/donations.phtml", type: "daily"
         },
