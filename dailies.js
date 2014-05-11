@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.0.1
+// @version      2.0.2
 // ==/UserScript==
 
 var bootScript = function(){
@@ -15,6 +15,7 @@ var bootScript = function(){
     var page = location.pathname + location.search;
     
     // TODO: Add support for specific time events, e.g. Snowager.
+    // TODO: Add 'ignore' button to remove undone dailies from the count.
     var dailies = {
         "Free, just-click-it dailies": { type: "divider" },
         "Collect Interest": {
@@ -52,16 +53,16 @@ var bootScript = function(){
             href: "/mall/shop.phtml?page=giveaway", type: "interval",
             delay: 60 * 60 * 8
         },
-        "Healing Springs": {
-            href:"/faerieland/springs.phtml", type:"interval",
-            delay : 60 * 30
-        },
         "Grave Danger": {
             // TODO: Scrape remaining time and update appropriately.
             href: "/halloween/gravedanger/", type: "daily"
         },
+        "Healing Springs": {
+            href:"/faerieland/springs.phtml", type:"interval",
+            delay : 60 * 30
+        },
 
-        "Item fetching dailies": { type: "divider" },
+        "Free, get-an-item dailies": { type: "divider" },
         "Giant Omelette": {
             href: "/prehistoric/omelette.phtml", type: "daily"
         },
@@ -109,8 +110,9 @@ var bootScript = function(){
         "Faerie Caverns": {
             href: "/faerieland/caverns/index.phtml", type: "daily"
         },
-        "Random Events Machine": {
-            href: "/space/coincidence.phtml", type: "daily"
+        "Employment Agency (Basic)": {
+            href: "/faerieland/employ/employment.phtml?type=jobs&voucher=basic",
+            type: "daily"
         },
 
         "Puzzles or effort required dailies": { type: "divider" },
