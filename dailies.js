@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.0.2
+// @version      2.0.3
 // ==/UserScript==
 
 var bootScript = function(){
@@ -60,10 +60,6 @@ var bootScript = function(){
             // TODO: Scrape remaining time and update appropriately.
             href: "/halloween/gravedanger/", type: "daily"
         },
-        "Healing Springs": {
-            href:"/faerieland/springs.phtml", type:"interval",
-            delay : 60 * 30
-        },
 
         "Free, get-an-item dailies": { type: "divider" },
         "Giant Omelette": {
@@ -90,11 +86,12 @@ var bootScript = function(){
         "Money Tree": {
             href: "/donations.phtml", type: "daily"
         },
+        "Healing Springs": {
+            href:"/faerieland/springs.phtml", type:"interval",
+            delay : 60 * 30
+        },
 
         "Dailies that cost NP or items": { type: "divider" },
-        "Bargain Stocks": {
-            href: "/stockmarket.phtml?type=list&bargain=true", type: "daily"
-        },
         "Wheel of Excitement": {
             href: "/faerieland/wheel.phtml", type: "interval",
             delay: 60 * 60 * 2
@@ -116,6 +113,9 @@ var bootScript = function(){
         "Employment Agency (Basic)": {
             href: "/faerieland/employ/employment.phtml?type=jobs&voucher=basic",
             type: "daily"
+        },
+        "Bargain Stocks": {
+            href: "/stockmarket.phtml?type=list&bargain=true", type: "daily"
         },
 
         "Puzzles or effort required dailies": { type: "divider" },
