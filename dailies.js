@@ -24,6 +24,9 @@ var bootScript = function(){
         "Lab Ray": {
             href:"/lab.phtml", type:"daily"
         },
+        "Peptet Lab Ray": {
+            href: "/petpetlab.phtml", type: "daily"
+        },
         "Forgotten Shore": {
             href: "/pirates/forgottenshore.phtml", type: "daily"
         },
