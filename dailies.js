@@ -133,6 +133,17 @@ var bootScript = function(){
         },
         "Grumpy King": {
             href: "/medieval/grumpyking.phtml", type: "daily"
+        },
+
+        // TODO: Detect NST and enable when available.
+        "Specific time dailies": { type: "divider" },
+        "Snowager": {
+            href: "/winter/snowager.phtml", type: "time",
+            times: "6-7am, 2-3pm, 10-11pm"
+        },
+        "Deadly Dice": {
+            href: "/worlds/deadlydice.phtml", type: "time",
+            times: "12-1am"
         }
     };
     
@@ -234,7 +245,7 @@ var bootScript = function(){
                 wait = ((lastTime.day + 1) * 24 * 60 * 60) - NST.now();
             } else if (daily.type == "interval") {
                 wait = daily.delay - (NST.now() - lastTime.time);
-            } else if (daily.type == "divider") {
+            } else if (daily.type == "divider" || daily.type == "time") {
                 continue;
             }
             dailies[name].timeLeft = wait;
@@ -312,6 +323,12 @@ var bootScript = function(){
                                 .append($("<span />").css("float", "center").html(name))
                                 .append("<br />");
                         }
+                    } else if (daily.type == "time") {
+                        dailyEntry
+                            .append($("<span />").css("float", "left")
+                                    .append($("<a />").html(name).attr("href", daily.href)))
+                            .append($("<span />").css("float", "right").html(daily.times))
+                            .append("<br />");
                     } else {
                         dailyEntry
                             .append($("<span />").css("float", "left")
