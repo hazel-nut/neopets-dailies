@@ -134,6 +134,9 @@ var bootScript = function(){
         "Grumpy King": {
             href: "/medieval/grumpyking.phtml", type: "daily"
         },
+        "Food Club": {
+            href: "/pirates/foodclub.phtml", type: "daily"
+        },
 
         // TODO: Detect NST and enable when available.
         "Specific time dailies": { type: "divider" },
