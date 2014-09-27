@@ -17,24 +17,32 @@ var bootScript = function(){
     // TODO: Add support for specific time events, e.g. Snowager.
     // TODO: Add 'ignore' button to remove undone dailies from the count.
     var dailies = {
-        "Free, just-click-it dailies": { type: "divider" },
+        "Top priority": { type: "divider" },
         "Collect Interest": {
             href: "/bank.phtml", type: "daily"
         },
         "Lab Ray": {
-            href:"/lab.phtml", type:"daily"
+            href: "/lab.phtml", type: "daily"
         },
-        "Peptet Lab Ray": {
-            href: "/petpetlab.phtml", type: "daily"
+        "Bargain Stocks": {
+            href: "/stockmarket.phtml?type=list&bargain=true", type: "daily"
         },
-        "Forgotten Shore": {
-            href: "/pirates/forgottenshore.phtml", type: "daily"
+        "Food Club": {
+            href: "/pirates/foodclub.phtml?type=bet", type: "daily"
         },
+        "Battledome": {
+            href: "/dome/", type: "daily"
+        },
+
+        "Primary dailies": { type: "divider" },
         "Tombola": {
             href: "/island/tombola.phtml", type: "daily"
         },
         "Fruit Machine": {
             href: "/desert/fruit/index.phtml", type: "daily"
+        },
+        "Forgotten Shore": {
+            href: "/pirates/forgottenshore.phtml", type: "daily"
         },
         "Anchor Management": {
             href: "/pirates/anchormanagement.phtml", type: "daily"
@@ -45,9 +53,6 @@ var bootScript = function(){
         "TDMBGPOP": {
             href: "/faerieland/tdmbgpop.phtml", type: "daily"
         },
-        "Rich Slorg": {
-            href: "/shop_of_offers.phtml?slorg_payout=yes", type: "daily"
-        },
         "Coltzan's Shrine": {
             href: "/desert/shrine.phtml", type: "interval",
             delay: 60 * 60 * 12
@@ -56,17 +61,53 @@ var bootScript = function(){
             href: "/mall/shop.phtml?page=giveaway", type: "interval",
             delay: 60 * 60 * 8
         },
-        "Grave Danger": {
-            // TODO: Scrape remaining time and update appropriately.
-            href: "/halloween/gravedanger/", type: "daily"
-        },
 
-        "Free, get-an-item dailies": { type: "divider" },
+        "Secondary dailies": { type: "divider" },
+        "Peptet Lab Ray": {
+            href: "/petpetlab.phtml", type: "daily"
+        },
         "Giant Omelette": {
             href: "/prehistoric/omelette.phtml", type: "daily"
         },
         "Giant Jelly": {
             href: "/jelly/jelly.phtml", type: "daily"
+        },
+        "Wheel of Excitement": {
+            href: "/faerieland/wheel.phtml", type: "interval",
+            delay: 60 * 60 * 2
+        },
+        "Wheel of Mediocrity": {
+            href: "/prehistoric/mediocrity.phtml", type: "interval",
+            delay: 60 * 40
+        },
+        "Wheel of Knowledge": {
+            href: "/medieval/knowledge.phtml", type: "daily"
+        },
+        "Scratchcard Kiosk": {
+            href: "/desert/sc/kiosk.phtml", type: "interval",
+            delay: 60 * 60 * 4
+        },
+        "Faerie Caverns": {
+            href: "/faerieland/caverns/index.phtml", type: "daily"
+        },
+        "Healing Springs": {
+            href: "/faerieland/springs.phtml", type: "interval",
+            delay : 60 * 30
+        },
+        "Wishing Well": {
+            href: "/wishing.phtml", type: "daily"
+        },
+        "Money Tree": {
+            href: "/donations.phtml", type: "daily"
+        },
+
+        "Shitty dailies": { type: "divider" },
+        "Grave Danger": {
+            // TODO: Scrape remaining time and update appropriately.
+            href: "/halloween/gravedanger/", type: "daily"
+        },
+        "Kiko Pop": {
+            href: "/worlds/kiko/kpop/", type: "daily"
         },
         "Apple Bobbing": {
             href: "/halloween/applebobbing.phtml", type: "daily"
@@ -83,50 +124,23 @@ var bootScript = function(){
         "Mysterious Symol Hole": {
             href: "/medieval/symolhole.phtml", type: "daily"
         },
-        "Money Tree": {
-            href: "/donations.phtml", type: "daily"
+        "Rich Slorg": {
+            href: "/shop_of_offers.phtml?slorg_payout=yes", type: "daily"
         },
-        "Healing Springs": {
-            href:"/faerieland/springs.phtml", type:"interval",
-            delay : 60 * 30
+        "Mystery Island Mystic": {
+            href: "/island/mystichut.phtml", type: "daily"
+        },
+        "Haiku": {
+            href: "/island/haiku/haiku.phtml", type: "daily"
         },
 
-        "Dailies that cost NP or items": { type: "divider" },
-        "Wheel of Excitement": {
-            href: "/faerieland/wheel.phtml", type: "interval",
-            delay: 60 * 60 * 2
-        },
-        "Wheel of Mediocrity": {
-            href:"/prehistoric/mediocrity.phtml", type:"interval",
-            delay: 60 * 40
-        },
-        "Wheel of Knowledge": {
-            href: "/medieval/knowledge.phtml", type: "daily"
-        },
-        "Winter Kiosk": {
-            href:"/winter/kiosk.phtml", type:"interval",
-            delay: 60 * 60 * 6
-        },
-        "Faerie Caverns": {
-            href: "/faerieland/caverns/index.phtml", type: "daily"
-        },
+        "Effort required dailies": { type: "divider" },
         "Employment Agency (Basic)": {
             href: "/faerieland/employ/employment.phtml?type=jobs&voucher=basic",
             type: "daily"
         },
-        "Bargain Stocks": {
-            href: "/stockmarket.phtml?type=list&bargain=true", type: "daily"
-        },
-
-        "Puzzles or effort required dailies": { type: "divider" },
         "Negg Cave": {
             href: "/shenkuu/neggcave/", type: "daily"
-        },
-        "Lunar Temple": {
-            href: "/shenkuu/lunar/", type: "daily"
-        },
-        "Faerie Crossword": {
-            href: "/games/crossword/index.phtml", type: "daily"
         },
         "Daily Puzzle": {
             href: "/community/", type: "daily"
@@ -134,19 +148,37 @@ var bootScript = function(){
         "Grumpy King": {
             href: "/medieval/grumpyking.phtml", type: "daily"
         },
-        "Food Club": {
-            href: "/pirates/foodclub.phtml", type: "daily"
+        "Wise Old King": {
+            href: "/medieval/wiseking.phtml", type: "daily"
+        },
+        "Faerie Crossword": {
+            href: "/games/crossword/index.phtml", type: "daily"
+        },
+        "Lunar Temple": {
+            href: "/shenkuu/lunar/", type: "daily"
         },
 
-        // TODO: Detect NST and enable when available.
         "Specific time dailies": { type: "divider" },
+        // TODO: Detect NST and enable when available.
         "Snowager": {
-            href: "/winter/snowager.phtml", type: "time",
-            times: "6-7am, 2-3pm, 10-11pm"
+            href: "/winter/snowager.phtml", type: "custom",
+            custom: "6-7am, 2-3pm, 10-11pm"
         },
         "Deadly Dice": {
-            href: "/worlds/deadlydice.phtml", type: "time",
-            times: "12-1am"
+            href: "/worlds/deadlydice.phtml", type: "custom",
+            custom: "12-1am"
+        },
+        "Turmaculus": {
+            href: "/medieval/turmaculus.phtml", type: "custom",
+            custom: "Varies"
+        },
+        "Tarla": {
+            href: "/freebies/tarlastoolbar.phtml", type: "custom",
+            custom: "Varies"
+        },
+        "Monthly Freebies": {
+            href: "/freebies/", type: "custom",
+            custom: ""
         }
     };
     
@@ -326,11 +358,11 @@ var bootScript = function(){
                                 .append($("<span />").css("float", "center").html(name))
                                 .append("<br />");
                         }
-                    } else if (daily.type == "time") {
+                    } else if (daily.type == "custom") {
                         dailyEntry
                             .append($("<span />").css("float", "left")
                                     .append($("<a />").html(name).attr("href", daily.href)))
-                            .append($("<span />").css("float", "right").html(daily.times))
+                            .append($("<span />").css("float", "right").html(daily.custom))
                             .append("<br />");
                     } else {
                         dailyEntry
