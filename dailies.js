@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.0.6
+// @version      2.0.7
 // ==/UserScript==
 
 var bootScript = function(){
@@ -280,7 +280,7 @@ var bootScript = function(){
                 wait = ((lastTime.day + 1) * 24 * 60 * 60) - NST.now();
             } else if (daily.type == "interval") {
                 wait = daily.delay - (NST.now() - lastTime.time);
-            } else if (daily.type == "divider" || daily.type == "time") {
+            } else if (daily.type == "divider" || daily.type == "custom") {
                 continue;
             }
             dailies[name].timeLeft = wait;
