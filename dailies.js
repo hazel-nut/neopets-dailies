@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.0.7
+// @version      2.0.8
 // ==/UserScript==
 
 var bootScript = function(){
@@ -33,6 +33,12 @@ var bootScript = function(){
         "Battledome": {
             href: "/dome/", type: "daily"
         },
+        "Training": {
+            href: "/pirates/academy.phtml", type: "daily"
+        },
+        "Wishing Well": {
+            href: "/wishing.phtml", type: "daily"
+        },
 
         "Primary dailies": { type: "divider" },
         "Tombola": {
@@ -57,20 +63,23 @@ var bootScript = function(){
             href: "/desert/shrine.phtml", type: "interval",
             delay: 60 * 60 * 12
         },
+        "Faerie Caverns": {
+            href: "/faerieland/caverns/index.phtml", type: "daily"
+        },
         "Qasalan Expellibox": {
             href: "/mall/shop.phtml?page=giveaway", type: "interval",
             delay: 60 * 60 * 8
         },
 
         "Secondary dailies": { type: "divider" },
-        "Peptet Lab Ray": {
-            href: "/petpetlab.phtml", type: "daily"
-        },
         "Giant Omelette": {
             href: "/prehistoric/omelette.phtml", type: "daily"
         },
         "Giant Jelly": {
             href: "/jelly/jelly.phtml", type: "daily"
+        },
+        "Wheel of Knowledge": {
+            href: "/medieval/knowledge.phtml", type: "daily"
         },
         "Wheel of Excitement": {
             href: "/faerieland/wheel.phtml", type: "interval",
@@ -80,34 +89,25 @@ var bootScript = function(){
             href: "/prehistoric/mediocrity.phtml", type: "interval",
             delay: 60 * 40
         },
-        "Wheel of Knowledge": {
-            href: "/medieval/knowledge.phtml", type: "daily"
-        },
         "Scratchcard Kiosk": {
             href: "/desert/sc/kiosk.phtml", type: "interval",
             delay: 60 * 60 * 4
-        },
-        "Faerie Caverns": {
-            href: "/faerieland/caverns/index.phtml", type: "daily"
         },
         "Healing Springs": {
             href: "/faerieland/springs.phtml", type: "interval",
             delay : 60 * 30
         },
-        "Wishing Well": {
-            href: "/wishing.phtml", type: "daily"
-        },
-        "Money Tree": {
-            href: "/donations.phtml", type: "daily"
+        "Peptet Lab Ray": {
+            href: "/petpetlab.phtml", type: "daily"
         },
 
         "Shitty dailies": { type: "divider" },
+        "Kiko Pop": {
+            href: "/worlds/kiko/kpop/", type: "daily"
+        },
         "Grave Danger": {
             // TODO: Scrape remaining time and update appropriately.
             href: "/halloween/gravedanger/", type: "daily"
-        },
-        "Kiko Pop": {
-            href: "/worlds/kiko/kpop/", type: "daily"
         },
         "Apple Bobbing": {
             href: "/halloween/applebobbing.phtml", type: "daily"
@@ -132,6 +132,9 @@ var bootScript = function(){
         },
         "Haiku": {
             href: "/island/haiku/haiku.phtml", type: "daily"
+        },
+        "Money Tree": {
+            href: "/donations.phtml", type: "daily"
         },
 
         "Effort required dailies": { type: "divider" },
