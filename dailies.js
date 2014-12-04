@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.0.8
+// @version      2.0.9
 // ==/UserScript==
 
 var bootScript = function(){
@@ -39,6 +39,9 @@ var bootScript = function(){
         "Wishing Well": {
             href: "/wishing.phtml", type: "daily"
         },
+        "Advent Calendar": {
+            href: "/winter/adventcalendar.phtml", type: "daily"
+        },
 
         "Primary dailies": { type: "divider" },
         "Tombola": {
@@ -69,6 +72,9 @@ var bootScript = function(){
         "Qasalan Expellibox": {
             href: "/mall/shop.phtml?page=giveaway", type: "interval",
             delay: 60 * 60 * 8
+        },
+        "Snowager": {
+            href: "/winter/snowager.phtml", type: "daily"
         },
 
         "Secondary dailies": { type: "divider" },
@@ -163,10 +169,11 @@ var bootScript = function(){
 
         "Specific time dailies": { type: "divider" },
         // TODO: Detect NST and enable when available.
-        "Snowager": {
-            href: "/winter/snowager.phtml", type: "custom",
-            custom: "6-7am, 2-3pm, 10-11pm"
-        },
+        // Snowager hibernating during December.
+//        "Snowager": {
+//            href: "/winter/snowager.phtml", type: "custom",
+//            custom: "6-7am, 2-3pm, 10-11pm"
+//        },
         "Deadly Dice": {
             href: "/worlds/deadlydice.phtml", type: "custom",
             custom: "12-1am"
