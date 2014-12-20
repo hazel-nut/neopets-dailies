@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.0.10
+// @version      2.0.11
 // ==/UserScript==
 
 var bootScript = function(){
@@ -30,14 +30,14 @@ var bootScript = function(){
         "Food Club": {
             href: "/pirates/foodclub.phtml?type=bet", type: "daily"
         },
-        "Battledome": {
-            href: "/dome/", type: "daily"
-        },
         "Training": {
             href: "/pirates/academy.phtml", type: "daily"
         },
         "Wishing Well": {
             href: "/wishing.phtml", type: "daily"
+        },
+        "Battledome": {
+            href: "/dome/", type: "daily"
         },
         "Advent Calendar": {
             href: "/winter/adventcalendar.phtml", type: "daily"
@@ -65,12 +65,12 @@ var bootScript = function(){
         "TDMBGPOP": {
             href: "/faerieland/tdmbgpop.phtml", type: "daily"
         },
+        "Faerie Caverns": {
+            href: "/faerieland/caverns/index.phtml", type: "daily"
+        },
         "Coltzan's Shrine": {
             href: "/desert/shrine.phtml", type: "interval",
             delay: 60 * 60 * 12
-        },
-        "Faerie Caverns": {
-            href: "/faerieland/caverns/index.phtml", type: "daily"
         },
         "Qasalan Expellibox": {
             href: "/mall/shop.phtml?page=giveaway", type: "interval",
@@ -81,11 +81,18 @@ var bootScript = function(){
         },
 
         "Secondary dailies": { type: "divider" },
+        "Petpet Lab Ray": {
+            href: "/petpetlab.phtml", type: "daily"
+        },
         "Giant Omelette": {
             href: "/prehistoric/omelette.phtml", type: "daily"
         },
         "Giant Jelly": {
             href: "/jelly/jelly.phtml", type: "daily"
+        },
+        "Scratchcard Kiosk": {
+            href: "http://www.neopets.com/winter/kiosk.phtml", type: "interval",
+            delay: 60 * 60 * 6
         },
         "Wheel of Knowledge": {
             href: "/medieval/knowledge.phtml", type: "daily"
@@ -98,16 +105,9 @@ var bootScript = function(){
             href: "/prehistoric/mediocrity.phtml", type: "interval",
             delay: 60 * 40
         },
-        "Scratchcard Kiosk": {
-            href: "/desert/sc/kiosk.phtml", type: "interval",
-            delay: 60 * 60 * 4
-        },
         "Healing Springs": {
             href: "/faerieland/springs.phtml", type: "interval",
             delay : 60 * 30
-        },
-        "Peptet Lab Ray": {
-            href: "/petpetlab.phtml", type: "daily"
         },
 
         "Shitty dailies": { type: "divider" },
@@ -147,13 +147,6 @@ var bootScript = function(){
         },
 
         "Effort required dailies": { type: "divider" },
-        "Employment Agency (Basic)": {
-            href: "/faerieland/employ/employment.phtml?type=jobs&voucher=basic",
-            type: "daily"
-        },
-        "Negg Cave": {
-            href: "/shenkuu/neggcave/", type: "daily"
-        },
         "Daily Puzzle": {
             href: "/community/", type: "daily"
         },
@@ -162,6 +155,13 @@ var bootScript = function(){
         },
         "Wise Old King": {
             href: "/medieval/wiseking.phtml", type: "daily"
+        },
+        "Negg Cave": {
+            href: "/shenkuu/neggcave/", type: "daily"
+        },
+        "Employment Agency (Basic)": {
+            href: "/faerieland/employ/employment.phtml?type=jobs&voucher=basic",
+            type: "daily"
         },
         "Faerie Crossword": {
             href: "/games/crossword/index.phtml", type: "daily"
@@ -180,14 +180,6 @@ var bootScript = function(){
         "Deadly Dice": {
             href: "/worlds/deadlydice.phtml", type: "custom",
             custom: "12-1am"
-        },
-        "Turmaculus": {
-            href: "/medieval/turmaculus.phtml", type: "custom",
-            custom: "Varies"
-        },
-        "Tarla": {
-            href: "/freebies/tarlastoolbar.phtml", type: "custom",
-            custom: "Varies"
         },
         "Monthly Freebies": {
             href: "/freebies/", type: "custom",
