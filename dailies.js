@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.0.11
+// @version      2.0.12
 // ==/UserScript==
 
 var bootScript = function(){
@@ -91,7 +91,7 @@ var bootScript = function(){
             href: "/jelly/jelly.phtml", type: "daily"
         },
         "Scratchcard Kiosk": {
-            href: "http://www.neopets.com/winter/kiosk.phtml", type: "interval",
+            href: "/winter/kiosk.phtml", type: "interval",
             delay: 60 * 60 * 6
         },
         "Wheel of Knowledge": {
