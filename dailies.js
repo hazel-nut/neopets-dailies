@@ -31,19 +31,13 @@ var bootScript = function(){
             href: "/pirates/foodclub.phtml?type=bet", type: "daily"
         },
         "Training": {
-            href: "/pirates/academy.phtml", type: "daily"
+            href: "/training.phtml?type=status", type: "daily"
         },
         "Wishing Well": {
             href: "/wishing.phtml", type: "daily"
         },
         "Battledome": {
             href: "/dome/", type: "daily"
-        },
-        "Advent Calendar": {
-            href: "/winter/adventcalendar.phtml", type: "daily"
-        },
-        "Charity Corner": {
-            href: "/charitycorner/", type: "daily"
         },
 
         "Primary dailies": { type: "divider" },
@@ -76,11 +70,6 @@ var bootScript = function(){
             href: "/mall/shop.phtml?page=giveaway", type: "interval",
             delay: 60 * 60 * 8
         },
-        "Snowager": {
-            href: "/winter/snowager.phtml", type: "daily"
-        },
-
-        "Secondary dailies": { type: "divider" },
         "Petpet Lab Ray": {
             href: "/petpetlab.phtml", type: "daily"
         },
@@ -172,11 +161,10 @@ var bootScript = function(){
 
         "Specific time dailies": { type: "divider" },
         // TODO: Detect NST and enable when available.
-        // Snowager hibernating during December.
-//        "Snowager": {
-//            href: "/winter/snowager.phtml", type: "custom",
-//            custom: "6-7am, 2-3pm, 10-11pm"
-//        },
+        "Snowager": {
+            href: "/winter/snowager.phtml", type: "custom",
+            custom: "6-7am, 2-3pm, 10-11pm"
+        },
         "Deadly Dice": {
             href: "/worlds/deadlydice.phtml", type: "custom",
             custom: "12-1am"
