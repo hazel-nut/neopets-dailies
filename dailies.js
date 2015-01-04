@@ -31,7 +31,7 @@ var bootScript = function(){
             href: "/pirates/foodclub.phtml?type=bet", type: "daily"
         },
         "Training": {
-            href: "/training.phtml?type=status", type: "daily"
+            href: "/island/training.phtml?type=status", type: "daily"
         },
         "Wishing Well": {
             href: "/wishing.phtml", type: "daily"
