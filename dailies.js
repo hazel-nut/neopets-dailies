@@ -7,7 +7,7 @@
 // @match        http://*.neopets.com/*
 // @match        http://neopets.com/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-// @version      2.1.2
+// @version      2.1.3
 // ==/UserScript==
 
 var bootScript = function(){
@@ -38,9 +38,6 @@ var bootScript = function(){
         },
         "Battledome": {
             href: "/dome/", type: "daily"
-        },
-        "Daily Faerie Quests": {
-            href: "/quests.phtml", type: "daily"
         },
 
         "Primary dailies": { type: "divider" },
